@@ -11,7 +11,7 @@ string run_length_encoding(string input){
     for(int i = 0; i < input.size(); i++){
         arr[i] = 1;
     }
-    cout << input.size() << endl;
+    //cout << input.size() << endl;
     
     if(input.size() == 1){
         temp.push_back(input[0]);
