@@ -21,7 +21,7 @@ int search(int n, int i, int j)
 
     for (int a = 1; a < n - i; a++)
     {
-        for (int b = 1; b <= min(j, n - j - 1); b++)
+        for (int b = 1; b <= min(n - i - 1, n - j - 1); b++)
         {
             // width = a, height = b 인 square
             sum = 0;
