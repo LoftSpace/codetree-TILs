@@ -15,9 +15,10 @@ for i in range(1,k):
         grid[r][c-i]=0
     if c+i <n+1:
         grid[r][c+i]=0
-    
-    grid[r-i][c]=0
-    grid[r+i][c]=0
+    if r-i >0:
+        grid[r-i][c]=0
+    if r+i <n+1:
+        grid[r+i][c]=0
 
 for i in range(1,n+1):
     temp=[]
