@@ -33,7 +33,17 @@ def bomb(grid, m):
   
   result = []
   for row in temp:
-    r = explore(row, m)
+    r = []
+    while(True):
+      r = explore(row, m)
+      
+      if len(r) == len(row):
+        break
+      else:
+        row = r
+        continue
+    
+    # r = explore(row, m)
     if len(r) != len(grid):
       num = len(grid) - len(r)
       r.extend([0]*num)
