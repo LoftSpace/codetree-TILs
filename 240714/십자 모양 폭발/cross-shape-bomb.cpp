@@ -1,11 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int arr[100][100];
-int temp[100][100];
+int arr[200][200];
+int temp[200][200];
 
 void zeroing(int n, int r, int c){
     int reach = arr[r][c];
+    
     //0 채우기
     arr[r][c] = 0;
     for(int i = 1; i < reach; i++){
@@ -29,7 +30,7 @@ void gravity(int n){
         int end = n - 1;
         for(int j = n - 1; j >= 0; j--){
             if(arr[j][i] != 0){
-               // cout << "j is " << j << " j is " << i << endl;
+                //cout << "j is " << j << " j is " << i << endl;
                 temp[end][i] = arr[j][i];
                 end--;
                 
